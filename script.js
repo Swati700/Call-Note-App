@@ -1,6 +1,3 @@
-// buttons ko handle karna hai
-// filters ko handle karna hai
-
 const addBtn = document.querySelector("#addBtn");
 const note = document.querySelector(".form-container");
 const closeNote = document.querySelector(".close-btn");
