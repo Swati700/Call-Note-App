@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+// Demo Data
+const demoNote = {
+  imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300",
+  fullName: "Fatima Uma",
+  homeTown: "Singapore",
+  purpose: "Study",
+  selected: "Important"
+};
+
+>>>>>>> 55b028a (Add default demo card)
 const addBtn = document.querySelector("#addBtn");
 const note = document.querySelector(".form-container");
 const closeNote = document.querySelector(".close-btn");
@@ -94,7 +106,12 @@ form.addEventListener("submit", function (e) {
 //Show Cards
 function showCards() {
   stack.innerHTML = "";
-  let totalCards = JSON.parse(localStorage.getItem("tasks"));
+  let totalCards = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  if (totalCards.length === 0) {
+    totalCards.push(demoNote);
+  }
+
   totalCards.forEach(function (task) {
     // Main Card
     const noteCard = document.createElement("div");
