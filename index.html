@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- FORM  -->
+    <div class="overlay hidden"></div>
+
+    <div class="form-container hidden">
+      <form id="noteForm">
+        <h1>New Call</h1>
+
+        <div class="field">
+          <label>Image URL</label>
+          <input
+            required
+            type="text"
+            id="imgUrl"
+            placeholder="https://example.com/photo.jpg"
+          />
+        </div>
+
+        <div class="field">
+          <label>Full Name</label>
+          <input required type="text" id="name" placeholder="Enter full name" />
+        </div>
+
+        <div class="field">
+          <label>Home Town</label>
+          <input required type="text" id="town" placeholder="Enter home town" />
+        </div>
+
+        <div class="field">
+          <label>Purpose</label>
+          <input
+            required
+            type="text"
+            id="booking"
+            placeholder="e.g.. Quick appointment note"
+          />
+        </div>
+
+        <label>Category</label>
+        <div class="categories">
+          <label class="category emergency">
+            <input required type="radio" name="category" value="Emergency" />
+            <span></span>
+            Emergency
+          </label>
+
+          <label class="category important">
+            <input type="radio" name="category" value="Important" />
+            <span></span>
+            Important
+          </label>
+
+          <label class="category urgent">
+            <input type="radio" name="category" value="Urgent" />
+            <span></span>
+            Urgent
+          </label>
+
+          <label class="category norush">
+            <input type="radio" name="category" value="No Rush" />
+            <span></span>
+            No Rush
+          </label>
+        </div>
+
+        <button type="submit" class="create-btn">Create Note</button>
+        <button class="close-btn">Close</button>
+      </form>
+    </div>
+
+    <!-- NOTES  -->
+    <div class="note-container">
+      <!-- LEFT -->
+      <div class="left-icons">
+        <button id="addBtn">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <button id="upBtn">
+          <i class="fa-solid fa-angle-up"></i>
+        </button>
+
+        <button id="downBtn">
+          <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </div>
+
+      <!-- CARD STACK -->
+      <div class="stack"></div>
+
+      <!-- RIGHT -->
+      <div class="right-colors">
+        <button class="color black"></button>
+        <button class="color purple"></button>
+        <button class="color orange"></button>
+        <button class="color cyan"></button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
